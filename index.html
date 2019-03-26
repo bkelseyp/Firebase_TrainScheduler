@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Added Moment JS -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+ <!-- Firebase Reference -->
+ <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!-- Navigation Bar Here-->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper  amber darken-1">
+                <a href="#!" class="brand-logo center name">We.scheduleU</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Image Here-->
+    <div class="parallax-container">
+        <div class="section text-2">
+            <div class="container">
+                <div class="row">
+                    <h2 class="header col s12 center  indigo-text darken-4">The Modern Train Service, Search Your Train
+                        Status Below.
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="parallax img-1">
+            <img src="assets/images/IMG-train.jpg" alt="Train Image"
+                style="opacity: 1; transform: translate3d(-50%, 250.778px, 0px);">
+        </div>
+    </div>
+
+    <!--Train Schedule Display-->
+    <div class="container">
+        <div class="card">
+            <h5 class="blue lighten-2 white-text center-align title-1">Current Train Schedule</h5>
+            <table class="centered striped">
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>Frequency (min)</th>
+                        <th>New Arrival</th>
+                        <th>Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody id="inputDataHere"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h5 class="blue white-text center-align title-1">Add A Train</h5>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="train_name" type="text" class="validate">
+                            <label for="train_name">Train Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="destination_name" type="text" class="validate">
+                            <label for="destination_name">Destination</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="train_time" type="text" class="validate">
+                            <label for="train_time">First Train Time (HH:MM - Military Time)</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="min_Frequency" type="number" class="validate">
+                            <label for="min_Frequency">Frequency (Min)</label>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                            <button id="submit-bid" class="btn blue waves-effect waves-light center-align" type="submit" name="action">Submit
+                                    <i class="material-icons right">send</i>
+                                  </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+   <!-- Link my JS file here -->
+    <script type="text/javascript" src="assets/javascript/schedule-2.js"></script>
+
+</body>
+
+</html>
